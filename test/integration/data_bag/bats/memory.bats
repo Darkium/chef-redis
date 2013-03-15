@@ -24,3 +24,7 @@
   [ -d /var/log/redis ]
   [ -f /var/log/redis/memory.log ]
 }
+
+@test "It should add slaveof to *.conf" {
+  grep 'slaveof 198.18.0.1 7000' /etc/redis/memory.conf              
+}

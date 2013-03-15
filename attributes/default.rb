@@ -53,8 +53,3 @@ default.redis.config.list_max_ziplist_value   = 64
 default.redis.config.configure_set_max_intset_entries = false
 default.redis.config.set_max_intset_entries = 512
 
-# replication
-default.redis.replication.enabled = false
-default.redis.replication.redis_replication_role = 'master' # or slave
-default.redis.replication.tunnel.enabled = false
-default.redis.replication.tunnel.accept_port = 46379

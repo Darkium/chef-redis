@@ -35,6 +35,8 @@ suites:
       instances:
       - "memory"
       - "persistant"
+      config:
+        slaveof_ip:  198.18.0.1      
 - name: package
   run_list:
     - "recipe[redis::server]"
@@ -46,6 +48,7 @@ suites:
       install_type: source
       config:
         logfile: /var/log/redis/server.log
+        slaveof_ip:  198.18.0.1      
 - name: source-2.6.10
   run_list:
     - "recipe[redis::server]"
@@ -55,3 +58,4 @@ suites:
       source:
         version: 2.6.10
         sha: 7c8ac91c2607ae61e2b50a9a7df25120af6df364
+

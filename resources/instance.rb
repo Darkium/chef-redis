@@ -24,6 +24,9 @@ attribute :rdbcompression, :kind_of => [TrueClass, FalseClass], :default => true
 attribute :timeout,        :kind_of => Fixnum, :default => 300
 attribute :save,           :kind_of => Array,  :default => ['900 1', '300 10', '60 10000']
 attribute :activerehashing,:kind_of => [TrueClass, FalseClass], :default => true
+attribute :slaveof,        :kind_of => String, :default => nil
+attribute :slaveof_ip,     :kind_of => String, :default => nil
+attribute :slaveof_port,   :kind_of => Integer, :default => 6379
 
 ###
 ## the following configuration settings may only work with a recent redis release
@@ -65,7 +68,8 @@ state_attrs(
  :timeout,
  :save,
  :activerehashing,
-
+ :slaveof,
+            
  :slowlog_log_slower_than,
  :slowlog_max_len,
 

@@ -14,3 +14,5 @@ default.redis.config.rdbcompression  = true
 default.redis.config.timeout         = 300
 default.redis.config.save            = ['900 1', '300 10', '60 10000']
 default.redis.config.activerehashing = true
+default.redis.config.slaveof_ip      = nil
+default.redis.config.slaveof_port    = node.redis.config.port
